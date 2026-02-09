@@ -1,0 +1,8 @@
+from python:3.12-alpine
+
+workdir app/
+copy . .
+copy ../requirements.txt .
+cmd pip install -r requirements.txt
+
+
