@@ -1,5 +1,5 @@
 # Image hosting
-
+```text
 **Директории и файлы:**
 
 project/
