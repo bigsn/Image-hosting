@@ -1,33 +1,26 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+import sys
+from http.server import HTTPServer
+from database import init_db, save_metadata
+from http_handler import SimpleHandler
 from loguru import logger
+from conf import HOST, PORT
 
-logger.add("../logs/app.log")
+#Настройка логирования
+logger.remove()
+logger.add("./logs/app.log", level="DEBUG")
+logger.add(sys.stderr, level="DEBUG", colorize=True)
 
-logger.info("Это сообщение попадет и в консоль, и в файл my_app.log")
-
-class SimpleHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        logger.info(f'Get query {self.path}')
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-
-        message = f'<h1>Hello, World!</h1>'
-        self.wfile.write(message.encode('utf-8'))
-
-
-# Конфигурация сервера
-host = 'localhost'
-port = 8000
+# Подключение к базе
+init_db()
 
 # Запуск сервера
-server = HTTPServer((host, port), SimpleHandler)
-logger.info(f"Сервер запущен на http://{host}:{port}")
-
+server = HTTPServer((HOST, PORT), SimpleHandler)
+logger.info(f"Сервер запущен на http://{HOST}:{PORT}")
 try:
     server.serve_forever()
 except KeyboardInterrupt as e:
-    logger.error(f'ошибка сервера {e}')
+    logger.exception(f'ошибка сервера')
+    raise
 
 finally:
     server.server_close()
