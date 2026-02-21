@@ -16,8 +16,15 @@ class SimpleHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         parsed_path = urlparse(self.path)
-        page = int(parse_qs(parsed_path.query).get('page', 1))
-        page_size= int(parse_qs(parsed_path.query).get('page_size', 10))
+        logger.info(f'query: {self.path}')
+        page = parse_qs(parsed_path.query).get('page', ['1'])[0]
+        page_size= parse_qs(parsed_path.query).get('page_size', ['10'])[0]
+        if page.isdigit():
+            page = int(page)
+        else: page = 1
+        if page_size.isdigit():
+            page_size = int(page_size)
+        else: page_size = 10
         logger.info(f'pages: {page}, {page_size}')
         if parsed_path.path == "/get-images/":
             max_images = get_count()
@@ -33,14 +40,13 @@ class SimpleHandler(BaseHTTPRequestHandler):
                 }
                 for i in images
             ]
-            return  self.send_json(images, 200)
+            return  self.send_json({"images": images, "max_images": ceil(max_images[0] / page_size)}, 200)
 
         elif parsed_path.path.startswith("/backup/"):
             images = get_all_images()
             backup(images)
             return self.send_json({"backup": "ok"}, 200)
-        else:
-            logger.info(f'Not found file')
+
 
     def do_POST(self):
         parsed_path = urlparse(self.path)
