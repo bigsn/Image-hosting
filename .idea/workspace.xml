@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcfcd658-4bea-488d-a8a7-2e4fa62f2529" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/http_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image-uploader/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image-uploader/img/icon/crash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image-uploader/img/icon/crash1.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="fcfcd658-4bea-488d-a8a7-2e4fa62f2529" name="Changes" comment="backup">
+      <change afterPath="$PROJECT_DIR$/app/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/form/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/http_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/http_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image-uploader/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,30 +44,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.database.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Python/image-host/static/image-uploader/img/icon&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.1.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.database.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Python/image-host/static/form",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\image-host\static\form" />
       <recent name="D:\Python\image-host\static\image-uploader\img\icon" />
       <recent name="D:\Python\image-host\static" />
       <recent name="D:\Python\image-host\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python\image-host\static" />
       <recent name="D:\Python\image-host\static\image-uploader" />
       <recent name="D:\Python\image-host\static\images" />
       <recent name="D:\Python\image-host\static\form" />
       <recent name="D:\Python\image-host" />
-      <recent name="D:\Python\image-host\static" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -85,6 +79,11 @@
         <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
       </set>
     </attachedChunks>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -114,11 +113,45 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

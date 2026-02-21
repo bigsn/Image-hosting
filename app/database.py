@@ -90,7 +90,7 @@ def get_count():
     log_success = "Images get successfully"
     log_fail = "Failed to get images"
     data= exec_query(query, log_success, log_fail, fetch_data=1)
-    return  data
+    return  data[0]
 
 def get_image(original_name):
     query ="""

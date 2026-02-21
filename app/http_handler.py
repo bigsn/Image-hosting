@@ -4,6 +4,7 @@ from database import get_images, del_image, get_all_images, get_count
 from loguru import logger
 from utils import validate, save_image, delete_file, backup
 from urllib.parse import urlparse, parse_qs
+from math import ceil
 import sys
 
 logger.remove()
@@ -19,8 +20,8 @@ class SimpleHandler(BaseHTTPRequestHandler):
         page_size= int(parse_qs(parsed_path.query).get('page_size', 10))
         logger.info(f'pages: {page}, {page_size}')
         if parsed_path.path == "/get-images/":
-            pages = get_count()
-            logger.info(f'count: {pages}')
+            max_images = get_count()
+            logger.info(f'count page: {ceil(max_images[0] / page_size)}')
             images = get_images(page, page_size)
             images = [
                 {
@@ -32,7 +33,6 @@ class SimpleHandler(BaseHTTPRequestHandler):
                 }
                 for i in images
             ]
-            logger.info(len(images))
             return  self.send_json(images, 200)
 
         elif parsed_path.path.startswith("/backup/"):
