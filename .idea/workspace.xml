@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcfcd658-4bea-488d-a8a7-2e4fa62f2529" name="Changes" comment="pagination">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/http_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/http_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/form/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/form/images.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image-uploader/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/image-uploader/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image-uploader/js/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/image-uploader/js/images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image-uploader/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/image-uploader/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/tg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
-    </list>
+    <list default="true" id="fcfcd658-4bea-488d-a8a7-2e4fa62f2529" name="Changes" comment="add multipart" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771690432101</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add multipart">
+      <option name="closed" value="true" />
+      <created>1772041900114</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772041900114</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +198,7 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="backup 1" />
     <MESSAGE value="pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination" />
+    <MESSAGE value="add multipart" />
+    <option name="LAST_COMMIT_MESSAGE" value="add multipart" />
   </component>
 </project>
