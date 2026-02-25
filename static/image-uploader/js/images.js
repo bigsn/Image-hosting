@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="file-col file-col-delete">
                         <button class="delete-btn" data-index="${item.original_filename}"><img src="../image-uploader/img/icon/crash1.webp" height="30px" alt="delete icon"></button>
                     </div>
-                `;
+                    `
                 list.appendChild(fileItem);
             });
 

@@ -2,10 +2,11 @@ import json
 from http.server import BaseHTTPRequestHandler
 from database import get_images, del_image, get_all_images, get_count
 from loguru import logger
-from utils import validate, save_image, delete_file, backup
+from utils import save_image, delete_file, backup
 from urllib.parse import urlparse, parse_qs
 from math import ceil
 import sys
+
 
 logger.remove()
 logger.add("./logs/app.log", level="DEBUG")
@@ -25,10 +26,8 @@ class SimpleHandler(BaseHTTPRequestHandler):
         if page_size.isdigit():
             page_size = int(page_size)
         else: page_size = 10
-        logger.info(f'pages: {page}, {page_size}')
         if parsed_path.path == "/get-images/":
             max_images = get_count()
-            logger.info(f'count page: {ceil(max_images[0] / page_size)}')
             images = get_images(page, page_size)
             images = [
                 {
@@ -46,31 +45,28 @@ class SimpleHandler(BaseHTTPRequestHandler):
             images = get_all_images()
             backup(images)
             return self.send_json({"backup": "ok"}, 200)
+        return self.send_json({"error": "not Path"}, 400)
 
 
     def do_POST(self):
         parsed_path = urlparse(self.path)
+        logger.info(parsed_path)
         if parsed_path.path == "/upload":
             content_length = int(self.headers.get('Content-Length', 0))
             if content_length == 0:
                 logger.info(int(self.headers.get('Content-Length', 0)))
-                return  self.send_json({'error': 'Not file'}, 400)
-            filename = self.headers.get('X-Filename', '')
-            logger.info(filename)
-            if not filename:
-                return self.send_json({'error': 'Not file name'}, 400)
-            post_data = self.rfile.read(content_length)
+                return  self.send_json({'error': 'Not file'}, 404)
 
-            # валидация
-            if validate(filename, post_data):
-                origin_name = save_image(filename, post_data)
-                if origin_name:
-                    response = {"status": "success", "message": f'http://localhost/images/{origin_name}'}
-                    return self.send_json(response, 200)
-                else:
-                    return self.send_json({'error': 'Not saved'}, 404)
+            post_data = self.rfile.read(content_length)
+            logger.info("read data")
+            origin_name = save_image(post_data)
+            if origin_name:
+                response = {"status": "success", "message": f'http://localhost/images/{origin_name}'}
+                return self.send_json(response, 200)
             else:
                 return self.send_json({'error': 'Not saved'}, 404)
+        else:
+            return self.send_json({'error': 'Not saved'}, 404)
 
     def do_DELETE(self):
         parsed_path = urlparse(self.path)

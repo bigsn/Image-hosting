@@ -8,5 +8,7 @@ dependencies = [
     "psycopg>=3.3.2",
     "psycopg2-binary>=2.9.11",
     "python-dotenv>=1.2.1",
+    "python-multipart>=0.0.22",
+    "requests-toolbelt>=1.0.0",
     "schedule>=1.2.2",
 ]

@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
         // POST запрос на сервер
-                fetch('http://localhost/upload', {method: 'POST', headers: {'X-Filename': file.name}, body: file})
+                form = new FormData()
+                form.append('image', file, file.name)
+                fetch('http://localhost/upload', {method: 'POST', body: form})
                     .then(res => res.json())
                     .then(data => {
                                 console.log("SUCCESS", data)
